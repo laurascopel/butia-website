@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["**", "!dist", "!node_modules"]
+		"includes": ["**", "!dist", "!node_modules", "!src/index.css"]
 	},
 	"formatter": {
 		"enabled": true,
@@ -16,6 +16,12 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
+			"correctness": {
+				"noUnusedImports": {
+					"level": "error",
+					"fix": "safe"
+				}
+			},
 			"preset": "recommended"
 		}
 	},
