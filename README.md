@@ -1,75 +1,78 @@
-# React + TypeScript + Vite
+# Butiá — Site Institucional
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site institucional da **Butiá**, assessoria de comunicação especializada no mercado audiovisual brasileiro.
 
-Currently, two official plugins are available:
+## Sobre a Butiá
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A Butiá nasce da necessidade de um olhar integrado sobre a divulgação de obras cinematográficas. Diferente de uma assessoria de imprensa tradicional, voltada majoritariamente à imprensa e à crítica, a proposta atua na construção da presença pública da obra, desenvolvendo materiais, campanhas e estratégias de comunicação multiplataforma — do pré à pós-produção e distribuição.
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **[React](https://react.dev/)** + **[Vite](https://vitejs.dev/)** — biblioteca de UI e bundler/dev server
+- **[TypeScript](https://www.typescriptlang.org/)** — tipagem estática
+- **[React Router](https://reactrouter.com/)** — roteamento entre páginas
+- **[Tailwind CSS v4](https://tailwindcss.com/)** — estilização utilitária
+- **[Framer Motion](https://www.framer.com/motion/)** — animações de entrada e transições
+- **[Biome](https://biomejs.dev/)** — linter e formatter
+- **[clsx](https://github.com/lukeed/clsx)** — concatenação segura de classes condicionais
 
-## Expanding the ESLint configuration
+Componentes de UI construídos sob medida, sem dependência de bibliotecas de componentes prontos.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Estrutura do projeto
 
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+src/
+├── assets/           # Logos, ilustrações e vetores
+├── components/        # Componentes reutilizáveis
+├── pages/             # Páginas da aplicação
+├── App.tsx            # Definição das rotas
+├── main.tsx            # Ponto de entrada da aplicação
+└── index.css           # Estilos globais e tema Tailwind
 ```
+
+## Como rodar o projeto localmente
+
+### Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/laurascopel/butia-website.git
+
+# Acesse a pasta do projeto
+cd butia-website
+
+# Instale as dependências
+npm install
+```
+
+### Ambiente de desenvolvimento
+
+```bash
+npm run dev
+```
+
+### Build de produção
+
+```bash
+npm run build
+```
+
+### Preview do build
+
+```bash
+npm run preview
+```
+
+### Lint e formatação
+
+```bash
+npm run lint
+```
+
+## Licença
+
+Este projeto foi desenvolvido para uso exclusivo da Butiá. Todos os direitos de marca, identidade visual e conteúdo pertencem à Butiá.
+
+---
+
+Desenvolvido por [Laura](https://github.com/laurascopel) 
