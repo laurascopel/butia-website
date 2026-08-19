@@ -30,4 +30,18 @@ body {
 	margin: 0;
 }
 
+h2 {
+	letter-spacing: 2px;
+	font-size: var(--text-5xl); 
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+}
+
+@media (max-width: 768px) {
+  h2 {
+	letter-spacing: 2px;
+    font-size: var(--text-4xl);
+	line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+}
+
 nav a:hover { color: var(--color-orange); }
