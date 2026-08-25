@@ -1,20 +1,23 @@
 import { BsFillMegaphoneFill } from "react-icons/bs";
+import { FaInstagram } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
 import { PiFilmSlateFill, PiVideoFill } from "react-icons/pi";
 import { RiDraftFill } from "react-icons/ri";
-import animatedLogo from "../assets/logos/animated-logo.gif";
-import logoSlogan from "../assets/logos/logoSlogan.svg";
-import logoName from "../assets/logos/name.svg";
-import bg from "../assets/vectors/bg_form.svg";
-import formSquare from "../assets/vectors/form-1.svg";
-import formLogo from "../assets/vectors/form-2.svg";
-import formRed from "../assets/vectors/form-3.svg";
-import formFilm from "../assets/vectors/form-4.svg";
-import plantsBg from "../assets/vectors/plants-bg.svg";
+import bg1 from "../assets/illustrations/bg-01.svg";
+import bg2 from "../assets/illustrations/bg-02.svg";
+import illustration2 from "../assets/illustrations/illustration-02.svg";
+import illustration3 from "../assets/illustrations/illustration-03.svg";
+import shape1 from "../assets/illustrations/shape-01.svg";
+import shape2 from "../assets/illustrations/shape-02.svg";
+import logoSymbol from "../assets/logos/logo-symbol.svg";
+import logoWithTagline from "../assets/logos/logo-with-tagline.svg";
+import logoWordmark from "../assets/logos/logo-wordmark.svg";
 import { AnimatedSection } from "../components/AnimatedSection";
 import { Button } from "../components/Button";
 import { Card } from "../components/Card";
 import { Carousel } from "../components/Carousel";
 import { Container } from "../components/Container";
+import { Form } from "../components/Form";
 
 export default function Home() {
 	return (
@@ -24,20 +27,24 @@ export default function Home() {
 					Butiá — Assessoria de Comunicação para Cinema
 				</h1>
 				<img
-					src={plantsBg}
+					src={illustration2}
 					alt="Ilustração de plantas"
 					className="absolute left-0 w-80 opacity-5 sm:opacity-100 sm:static sm:w-104"
 				/>
-				<div className="flex flex-col items-center z-10">
-					<img src={animatedLogo} alt="Logo Butiá" className="w-70 sm:w-md" />
+				<div className="flex flex-col items-center h-132 z-10 justify-center">
 					<img
-						src={logoSlogan}
+						src={logoSymbol}
+						alt="Logo Butiá"
+						className="animate-logo-enter w-42 sm:w-60 mb-8 sm:mb-10"
+					/>
+					<img
+						src={logoWithTagline}
 						alt="Assessoria de comunicação para cinema"
-						className="h-38 sm:h-72 sm:-mt-14 -mt-8 mb-12 sm:pb-20"
+						className="h-38 sm:h-56"
 					/>
 				</div>
 				<img
-					src={formLogo}
+					src={illustration3}
 					alt="Vetor do filme do logo"
 					className="hidden sm:block sm:w-96"
 				/>
@@ -45,7 +52,7 @@ export default function Home() {
 			<AnimatedSection className="bg-cream">
 				<Container className="flex flex-col sm:flex-row justify-between items-center gap-10 sm:gap-24 sm:py-20 py-12">
 					<div className="flex flex-row shrink-0 gap-8 items-center">
-						<img src={formSquare} alt="Logo" className="h-78 sm:h-96 w-auto" />
+						<img src={shape1} alt="Logo" className="h-78 sm:h-96 w-auto" />
 
 						<h2 className="[writing-mode:vertical-rl] rotate-180  whitespace-nowrap">
 							QUEM <strong>SOMOS</strong>
@@ -56,42 +63,44 @@ export default function Home() {
 							A <strong>BUTIÁ</strong> nasce da necessidade de um olhar
 							integrado sobre a divulgação de obras cinematográficas. Diferente
 							de uma Assessoria de Imprensa tradicional, voltada
-							majoritariamente à imprensa e crítica, nossa proposta atua na{" "}
-							<strong>construção da presença pública da obra</strong>,
+							majoritariamente à imprensa e à crítica, atuamos na
+							<strong> construção da presença públicas </strong>do projeto,
 							desenvolvendo materiais, campanhas e estratégias de comunicação
 							multiplataforma.
 						</p>
 						<p>
-							Nosso papel é transformar o universo do filme em uma{" "}
+							Nosso papel é
 							<strong>
-								narrativa de comunicação coerente, atraente e consistente
+								{" "}
+								transformar o universo do filme em uma comunicação coerente
 							</strong>
-							, dialogando tanto com o público de cinema quanto com novos
-							espectadores nas redes sociais e plataformas digitais.
+							, atraente e consistente, alinhada à identidade da obra e
+							conectada tanto ao público de cinema quanto a novos espectadores
+							nas redes sociais e plataformas digitais.
 						</p>
-						<p className="text-xl font-extrabold italic">
-							“A BUTIÁ nasce da necessidade de um olhar integrado sobre a
-							divulgação de obras cinematográficas. Diferente de uma Assessoria
-							de Imprensa tradicional.”
+						<p className="text-xl sm:text-2xl font-extrabold italic">
+							Mais do que promover lançamentos, criamos narrativas, imagens e
+							experiências que conectam público e obra, ampliando seu universo
+							para além da tela.
 						</p>
 					</div>
 				</Container>
 			</AnimatedSection>
 			<AnimatedSection
 				className="bg-green bg-cover bg-center flex flex-col justify-center items-center sm:py-20 py-12"
-				style={{ backgroundImage: `url(${bg})` }}
+				style={{ backgroundImage: `url(${bg1})` }}
 			>
 				<div className="px-8 text-center">
 					<h2 className="text-orange">
 						MOMENTOS DE <strong>ATUAÇÃO</strong>
 					</h2>
 					<p className="text-cream pt-4">
-						A Butiá pode atuar em diferentes momentos da produção, adaptando
-						estratégia, escopo e entregas conforme as necessidades de cada
-						projeto.
+						A Butiá pode atuar em diferentes momentos da produção,
+						<strong> adaptando estratégia, escopo e entregas</strong> conforme
+						as necessidades de cada projeto.
 					</p>
 				</div>
-				<Container className="flex flex-col sm:flex-row gap-8 justify-center py-12">
+				<Container className="flex flex-col sm:flex-row gap-6 justify-center py-12">
 					<Card icon={RiDraftFill} title="PRÉ-PRODUÇÃO">
 						Identidade visual, posicionamento e materiais de pitching
 					</Card>
@@ -102,7 +111,7 @@ export default function Home() {
 						Trailers, teasers, cartazes, press kit e plano de lançamento
 					</Card>
 					<Card icon={BsFillMegaphoneFill} title="DISTRIBUIÇÃO">
-						Campanha digital, imprensa, eventos e monitoramento
+						Campanha digital, imprensa, redes sociais e monitoramento
 					</Card>
 				</Container>
 				<Button to="/servicos" variant="primary">
@@ -111,73 +120,79 @@ export default function Home() {
 			</AnimatedSection>
 			<AnimatedSection className="relative sm:py-20 py-12 bg-linear-to-b sm:bg-linear-to-r from-yellow from-45% to-cream to-45%">
 				<img
-					src={formRed}
+					src={shape2}
 					alt="Ilustração vetorial vermelha"
-					className="h-72 sm:h-112 w-auto absolute left-0"
+					className="h-72 sm:h-112 w-auto absolute"
 				/>
 				<Container className="flex flex-col sm:flex-row justify-between gap-16 sm:gap-12">
 					<Carousel />
-					<div className="flex flex-col gap-6 justify-center sm:max-w-md sm:pb-10">
+					<div className="flex flex-col gap-6 justify-center sm:w-122 sm:pb-10">
 						<h2 className="text-orange">
-							NOSSOS <strong>DIFERENCIAIS</strong>
+							O QUE <strong>ENTREGAMOS</strong>
 						</h2>
-						<ul className="space-y-2 font-medium list-['✦_'] list-outside pl-5">
-							<li>
-								<span>Equipe especializada em cinema e comunicação</span>
-							</li>
-							<li>
-								Repertório estético e narrativo de quem ama cinema brasileiro
-							</li>
-							<li>
-								Olhar atual conectado ao digital e aos novos comportamentos de
-								consumo
-							</li>
-							<li>
-								Atuação integrada com diretores e distribuidores, alinhada à
-								identidade artística
-							</li>
-							<li>
-								Soluções personalizadas, adaptadas ao porte e à fase de cada
-								produção
-							</li>
+						<p>
+							<strong>
+								Do conceito à tela: tudo que sua obra precisa para ser vista{" "}
+							</strong>
+							Estratégia, conteúdo e peças pensadas para dar presença ao filme,
+							no formato certo para cada etapa.
+						</p>
+						<ul className="space-y-2 font-medium list-['✦_'] list-inside">
+							<li>Textual — releases, sinopses, dossiês</li>
+							<li>Visual — trailers, cartazes, identidade visual</li>
+							<li>Estratégia — plano de comunicação e cronograma</li>
+							<li>Performance — clipping e relatórios</li>
 						</ul>
-						<Button to="/portfolio" className="w-fit" variant="secondary">
+						<Button to="/portfolio" className="w-fit mt-2" variant="secondary">
 							Veja nosso portfólio
 						</Button>
 					</div>
 				</Container>
 			</AnimatedSection>
-			<AnimatedSection className="bg-green sm:py-20 py-12">
-				<Container className="flex flex-col sm:flex-row justify-between items-center sm:gap-24">
-					<div className=" text-cream sm:w-lg flex flex-col gap-6">
+			<AnimatedSection
+				className="bg-green sm:py-20 py-12"
+				style={{ backgroundImage: `url(${bg2})` }}
+			>
+				<Container className="flex flex-col sm:flex-row justify-between items-center gap-14 sm:gap-20">
+					<div className=" text-cream sm:w-lg flex flex-col gap-4">
 						<h2 className=" text-orange font-bold">FALE COM A</h2>
 						<img
-							src={logoName}
+							src={logoWordmark}
 							alt="Logo Butiá"
-							className="w-sm sm:w-md mb-6"
+							className="w-sm sm:w-md mb-4"
 						/>
+						<div className="h-2 w-32 rounded-full bg-orange my-4"></div>
 						<p className="text-xl font-extrabold italic">
 							Vamos conversar sobre construir a presença pública do seu filme
 							com uma assessoria focada em comunicação para cinema?
 						</p>
 						<p>
-							Mais do que promover lançamentos, criamos narrativas, imagens e
-							experiências que conectam público e obra, ampliando seu universo
-							para além da tela.
+							Preencha o formulário ao lado para entrar em contato e contar um
+							pouco mais sobre o seu projeto! Acompanhe também nosso trabalho
+							pelas redes sociais.
 						</p>
-						<Button
-							to="/contact"
-							variant="primary"
-							className="w-fit mt-4 mb-8 sm:mb-0"
+						<a
+							className="flex flex-row items-center gap-4 mt-4 w-fit"
+							href={"https://www.instagram.com/butiacinema/"}
+							target="blank"
 						>
-							Entre em contato
-						</Button>
+							<span className="rounded-full flex items-center justify-center h-10 w-10 bg-orange cursor-pointer hover:bg-orange-dark">
+								<FaInstagram size={24} />
+							</span>
+							<p className="font-bold">@butiacinema</p>
+						</a>
+						<a
+							className="flex flex-row items-center gap-4 w-fit"
+							href="mailto:butiacinema@gmail.com"
+							target="blank"
+						>
+							<span className="rounded-full flex items-center justify-center h-10 w-10 bg-orange cursor-pointer hover:bg-orange-dark">
+								<LuMail size={24} />
+							</span>
+							<p className="font-bold">butiacinema@gmail.com</p>
+						</a>
 					</div>
-					<img
-						src={formFilm}
-						alt="Ilustração vetorial com claquete"
-						className="-mt-10 sm:mt-0 sm:h-132 w-auto"
-					/>
+					<Form />
 				</Container>
 			</AnimatedSection>
 		</main>

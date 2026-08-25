@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import { motion } from "framer-motion";
 import { Link, type LinkProps } from "react-router-dom";
+import { AnimatedItems } from "./AnimatedItems";
 
 interface ButtonProps extends LinkProps {
 	className?: string;
@@ -15,7 +15,7 @@ const buttonVariants = {
 export function Button({ children, className, variant, ...rest }: ButtonProps) {
 	const variants = buttonVariants[variant];
 	return (
-		<motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+		<AnimatedItems>
 			<Link
 				className={clsx(
 					"h-10 px-8 flex items-center justify-center rounded-3xl",
@@ -26,6 +26,6 @@ export function Button({ children, className, variant, ...rest }: ButtonProps) {
 			>
 				{children}
 			</Link>
-		</motion.div>
+		</AnimatedItems>
 	);
 }
