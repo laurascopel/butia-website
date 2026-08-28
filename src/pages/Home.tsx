@@ -1,5 +1,5 @@
 import { BsFillMegaphoneFill } from "react-icons/bs";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { LuMail } from "react-icons/lu";
 import { PiFilmSlateFill, PiVideoFill } from "react-icons/pi";
 import { RiDraftFill } from "react-icons/ri";
@@ -64,7 +64,7 @@ export default function Home() {
 							integrado sobre a divulgação de obras cinematográficas. Diferente
 							de uma Assessoria de Imprensa tradicional, voltada
 							majoritariamente à imprensa e à crítica, atuamos na
-							<strong> construção da presença públicas </strong>do projeto,
+							<strong> construção da presença pública </strong>do projeto,
 							desenvolvendo materiais, campanhas e estratégias de comunicação
 							multiplataforma.
 						</p>
@@ -88,7 +88,12 @@ export default function Home() {
 			</AnimatedSection>
 			<AnimatedSection
 				className="bg-green bg-cover bg-center flex flex-col justify-center items-center sm:py-20 py-12"
-				style={{ backgroundImage: `url(${bg1})` }}
+				style={{
+					backgroundImage: `url(${bg1})`,
+					backgroundRepeat: "no-repeat",
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+				}}
 			>
 				<div className="px-8 text-center">
 					<h2 className="text-orange">
@@ -100,7 +105,7 @@ export default function Home() {
 						as necessidades de cada projeto.
 					</p>
 				</div>
-				<Container className="flex flex-col sm:flex-row gap-6 justify-center py-12">
+				<Container className="flex flex-col sm:flex-row gap-8 justify-center py-12">
 					<Card icon={RiDraftFill} title="PRÉ-PRODUÇÃO">
 						Identidade visual, posicionamento e materiais de pitching
 					</Card>
@@ -121,28 +126,27 @@ export default function Home() {
 			<AnimatedSection className="relative sm:py-20 py-12 bg-linear-to-b sm:bg-linear-to-r from-yellow from-45% to-cream to-45%">
 				<img
 					src={shape2}
-					alt="Ilustração vetorial vermelha"
+					alt="Ilustração vetorial laranja"
 					className="h-72 sm:h-112 w-auto absolute"
 				/>
-				<Container className="flex flex-col sm:flex-row justify-between gap-16 sm:gap-12">
+				<Container className="flex flex-col sm:flex-row justify-between gap-24 sm:gap-12">
 					<Carousel />
-					<div className="flex flex-col gap-6 justify-center sm:w-122 sm:pb-10">
+					<div className="flex flex-col gap-6 justify-center sm:w-122">
 						<h2 className="text-orange">
-							O QUE <strong>ENTREGAMOS</strong>
+							COMO <strong>TRABALHAMOS</strong>
 						</h2>
 						<p>
-							<strong>
-								Do conceito à tela: tudo que sua obra precisa para ser vista{" "}
-							</strong>
-							Estratégia, conteúdo e peças pensadas para dar presença ao filme,
-							no formato certo para cada etapa.
+							Cada obra parte de uma realidade diferente e pode já ter materiais
+							produzidos, divulgações planejadas ou profissionais envolvidos em
+							sua comunicação. Junto à produção, a Butiá define quais ações
+							fazem sentido para cada projeto e constrói um escopo de serviços
+							<strong> flexível e personalizado </strong>para suas necessidades.
 						</p>
-						<ul className="space-y-2 font-medium list-['✦_'] list-inside">
-							<li>Textual — releases, sinopses, dossiês</li>
-							<li>Visual — trailers, cartazes, identidade visual</li>
-							<li>Estratégia — plano de comunicação e cronograma</li>
-							<li>Performance — clipping e relatórios</li>
-						</ul>
+						<p>
+							Desenvolvemos materiais textuais, visuais, audiovisuais e
+							estratégias em uma <strong>comunicação integrada</strong>, em que
+							tudo conversa entre si e constrói uma unidade para a obra.
+						</p>
 						<Button to="/portfolio" className="w-fit mt-2" variant="secondary">
 							Veja nosso portfólio
 						</Button>
@@ -151,7 +155,12 @@ export default function Home() {
 			</AnimatedSection>
 			<AnimatedSection
 				className="bg-green sm:py-20 py-12"
-				style={{ backgroundImage: `url(${bg2})` }}
+				style={{
+					backgroundImage: `url(${bg2})`,
+					backgroundRepeat: "no-repeat",
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+				}}
 			>
 				<Container className="flex flex-col sm:flex-row justify-between items-center gap-14 sm:gap-20">
 					<div className=" text-cream sm:w-lg flex flex-col gap-4">
@@ -180,6 +189,16 @@ export default function Home() {
 								<FaInstagram size={24} />
 							</span>
 							<p className="font-bold">@butiacinema</p>
+						</a>
+						<a
+							className="flex flex-row items-center gap-4 w-fit"
+							href={"https://www.linkedin.com/company/butiacinema/"}
+							target="blank"
+						>
+							<span className="rounded-full flex items-center justify-center h-10 w-10 bg-orange cursor-pointer hover:bg-orange-dark">
+								<FaLinkedinIn size={22} />
+							</span>
+							<p className="font-bold">/butiacinema</p>
 						</a>
 						<a
 							className="flex flex-row items-center gap-4 w-fit"

@@ -57,5 +57,5 @@ nav a:hover { color: var(--color-orange); }
 }
 
 .animate-logo-enter {
-  animation: logo-enter 4s ease-out forwards infinite;
+  animation: logo-enter 4s ease-out forwards;
 }

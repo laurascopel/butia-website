@@ -1,6 +1,7 @@
 import { useForm } from "@formspree/react";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import form from "../assets/illustrations/form.svg";
 import { FormInput } from "./FormInput";
 import { FormPhone, formatTelephone } from "./FormPhone";
 import { FormTextarea } from "./FormTextarea";
@@ -28,10 +29,14 @@ export function Form() {
 		<form
 			ref={formRef}
 			onSubmit={handleSubmit}
-			className="bg-orange rounded-4xl flex flex-col p-8 sm:p-12 w-sm sm:w-3xl sm:h-162 gap-4 shadow-2xl justify-center"
+			className="bg-orange rounded-4xl flex flex-col p-8 sm:p-12 w-92 h-218 sm:w-3xl sm:h-168 gap-4 justify-center"
+			style={{
+				WebkitMask: `url("${form}") center / 100% 100% no-repeat`,
+				mask: `url("${form}") center / 100% 100% no-repeat`,
+			}}
 		>
 			<input type="hidden" name="_language" value="pt-BR" />
-			<h3 className="text-4xl text-cream tracking-wide text-center mb-4">
+			<h3 className="text-4xl text-cream tracking-wide text-center mb-4 px-8 sm:px-0">
 				FORMULÁRIO <strong>DE CONTATO</strong>
 			</h3>
 			<FormInput name="name" type="text" placeholder="Digite seu nome" required>
