@@ -19,7 +19,7 @@ export function Header() {
 const MenuItems = [
 	{ name: "Página Inicial", path: "/" },
 	{ name: "Serviços", path: "/servicos" },
-	{ name: "Portfólio", path: "/portfolio" },
+	{ name: "Portfólio", path: "" },
 ];
 
 function DesktopMenu() {

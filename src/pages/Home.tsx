@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { BsFillMegaphoneFill } from "react-icons/bs";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { LuMail } from "react-icons/lu";
 import { PiFilmSlateFill, PiVideoFill } from "react-icons/pi";
 import { RiDraftFill } from "react-icons/ri";
+import { useLocation } from "react-router-dom";
 import bg1 from "../assets/illustrations/bg-01.svg";
 import bg2 from "../assets/illustrations/bg-02.svg";
 import illustration2 from "../assets/illustrations/illustration-02.svg";
@@ -20,6 +22,15 @@ import { Container } from "../components/Container";
 import { Form } from "../components/Form";
 
 export default function Home() {
+	const location = useLocation();
+	useEffect(() => {
+		if (location.hash === "#form") {
+			const formSection = document.getElementById("form");
+			if (formSection) {
+				formSection.scrollIntoView({ behavior: "smooth" });
+			}
+		}
+	}, [location.hash]);
 	return (
 		<main>
 			<AnimatedSection className="relative flex flex-col items-center justify-center sm:flex-row sm:justify-between bg-green overflow-hidden">
@@ -116,7 +127,7 @@ export default function Home() {
 						Trailers, teasers, cartazes, press kit e plano de lançamento
 					</Card>
 					<Card icon={BsFillMegaphoneFill} title="DISTRIBUIÇÃO">
-						Campanha digital, imprensa, redes sociais e monitoramento
+						Campanha digital, imprensa, redes sociais <br /> e monitoramento
 					</Card>
 				</Container>
 				<Button to="/servicos" variant="primary">
@@ -147,9 +158,6 @@ export default function Home() {
 							estratégias em uma <strong>comunicação integrada</strong>, em que
 							tudo conversa entre si e constrói uma unidade para a obra.
 						</p>
-						<Button to="/portfolio" className="w-fit mt-2" variant="secondary">
-							Veja nosso portfólio
-						</Button>
 					</div>
 				</Container>
 			</AnimatedSection>
@@ -161,6 +169,7 @@ export default function Home() {
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 				}}
+				id="form"
 			>
 				<Container className="flex flex-col sm:flex-row justify-between items-center gap-14 sm:gap-20">
 					<div className=" text-cream sm:w-lg flex flex-col gap-4">

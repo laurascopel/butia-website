@@ -1,5 +1,5 @@
 import type { IconType } from "react-icons";
-import card from "../assets/illustrations/card.svg";
+import card1 from "../assets/illustrations/card-01.svg";
 import { AnimatedItems } from "./AnimatedItems";
 
 interface CardProps {
@@ -14,8 +14,8 @@ export function Card({ children, icon, title }: CardProps) {
 		<AnimatedItems
 			className="bg-cream flex flex-col items-center justify-center p-8 w-74 h-66 sm:w-full sm:h-72"
 			style={{
-				WebkitMask: `url("${card}") center / 100% 100% no-repeat`,
-				mask: `url("${card}") center / 100% 100% no-repeat`,
+				WebkitMask: `url("${card1}") center / 100% 100% no-repeat`,
+				mask: `url("${card1}") center / 100% 100% no-repeat`,
 				filter: "drop-shadow(0 0 20px red)",
 			}}
 		>

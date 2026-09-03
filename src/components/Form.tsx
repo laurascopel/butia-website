@@ -70,7 +70,7 @@ export function Form() {
 			>
 				Nome do projeto
 			</FormInput>
-			<FormTextarea name="message" placeholder="Diga mais sobre projeto">
+			<FormTextarea name="message" placeholder="Diga mais sobre o projeto">
 				Mensagem
 			</FormTextarea>
 			<div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center">

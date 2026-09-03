@@ -11,7 +11,7 @@ function App() {
 				<Route element={<Layout />}>
 					<Route path="/" element={<Home />} />
 					<Route path="/servicos" element={<Services />} />
-					<Route path="/portfolio" element={<Portfolio />} />
+					<Route path="" element={<Portfolio />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
