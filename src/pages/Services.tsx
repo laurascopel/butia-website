@@ -14,6 +14,16 @@ import { Button } from "../components/Button";
 import { Container } from "../components/Container";
 
 export default function Services() {
+	const bgStyle = (image: string) => ({
+		backgroundImage: `url(${image})`,
+		backgroundRepeat: "no-repeat",
+		backgroundSize: "cover",
+		backgroundPosition: "center",
+	});
+	const cardStyle = {
+		WebkitMask: `url("${card2}") center / 100% 100% no-repeat`,
+		mask: `url("${card2}") center / 100% 100% no-repeat`,
+	};
 	return (
 		<main>
 			<AnimatedSection className="bg-green">
@@ -24,7 +34,7 @@ export default function Services() {
 							NOSSOS <strong>SERVIÇOS</strong>
 						</h1>
 					</div>
-					<div className="flex flex-col max-w-78 sm:max-w-md">
+					<div className="flex flex-col max-w-70 sm:max-w-md">
 						<p className="text-cream text-center sm:text-left">
 							Atuamos em diferentes momentos da produção, adaptando estratégia,
 							escopo e entregas conforme as necessidades de cada projeto.
@@ -32,17 +42,9 @@ export default function Services() {
 					</div>
 				</Container>
 			</AnimatedSection>
-			<AnimatedSection
-				className="bg-orange"
-				style={{
-					backgroundImage: `url(${bg4})`,
-					backgroundRepeat: "no-repeat",
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-				}}
-			>
+			<AnimatedSection className="bg-orange" style={bgStyle(bg4)}>
 				<Container className="flex flex-col sm:flex-row justify-between py-16">
-					<div className="flex flex-col gap-6 justify-center text-cream max-w-lg">
+					<div className="flex flex-col gap-6 justify-center text-cream max-w-lg order-2 sm:order-1">
 						<h2 className="font-bold">ESTRATÉGIA & POSICIONAMENTO</h2>
 						<p>
 							Definimos o posicionamento do seu projeto a partir de sua
@@ -51,10 +53,7 @@ export default function Services() {
 						<AnimatedItems>
 							<ul
 								className="space-y-2 p-10 bg-cream text-green font-medium"
-								style={{
-									WebkitMask: `url("${card2}") center / 100% 100% no-repeat`,
-									mask: `url("${card2}") center / 100% 100% no-repeat`,
-								}}
+								style={cardStyle}
 							>
 								<li> ✽ Diagnóstico de perfil da obra e público-alvo</li>
 								<li> ✽ Definição de posicionamento e marca</li>
@@ -66,19 +65,11 @@ export default function Services() {
 					<img
 						src={notebook}
 						alt="Notebook com apresentação da Butiá"
-						className="h-auto w-xl mt-10 sm:mt-0"
+						className="h-auto w-xl mb-10 sm:mb-0 order-1 sm:order-2"
 					/>
 				</Container>
 			</AnimatedSection>
-			<AnimatedSection
-				className="bg-green"
-				style={{
-					backgroundImage: `url(${bg2})`,
-					backgroundRepeat: "no-repeat",
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-				}}
-			>
+			<AnimatedSection className="bg-green" style={bgStyle(bg2)}>
 				<Container className="flex flex-col sm:flex-row justify-between py-16">
 					<img
 						src={cartaz}
@@ -94,10 +85,7 @@ export default function Services() {
 						<AnimatedItems>
 							<ul
 								className="space-y-2 p-10 bg-cream text-green font-medium"
-								style={{
-									WebkitMask: `url("${card2}") center / 100% 100% no-repeat`,
-									mask: `url("${card2}") center / 100% 100% no-repeat`,
-								}}
+								style={cardStyle}
 							>
 								<li>
 									✽ Desenvolvimento de cartazes, pôsteres, identidade visual e
@@ -114,17 +102,9 @@ export default function Services() {
 					</div>
 				</Container>
 			</AnimatedSection>
-			<AnimatedSection
-				className="bg-yellow"
-				style={{
-					backgroundImage: `url(${bg3})`,
-					backgroundRepeat: "no-repeat",
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-				}}
-			>
+			<AnimatedSection className="bg-yellow" style={bgStyle(bg3)}>
 				<Container className="flex flex-col sm:flex-row justify-between py-16">
-					<div className="flex flex-col gap-6 justify-center text-green max-w-lg">
+					<div className="flex flex-col gap-6 justify-center text-green max-w-lg order-2 sm:order-1">
 						<h2 className="font-bold">IMPRENSA</h2>
 						<p>
 							Ampliamos a presença da sua obra articulando imprensa, crítica e
@@ -133,10 +113,7 @@ export default function Services() {
 						<AnimatedItems>
 							<ul
 								className="space-y-2 p-10 bg-cream text-green font-medium"
-								style={{
-									WebkitMask: `url("${card2}") center / 100% 100% no-repeat`,
-									mask: `url("${card2}") center / 100% 100% no-repeat`,
-								}}
+								style={cardStyle}
 							>
 								<li> ✽ Redação de releases e notas oficiais</li>
 								<li> ✽ Construção e gestão de mailing segmentado</li>
@@ -147,19 +124,11 @@ export default function Services() {
 					<img
 						src={news}
 						alt="Celular com texto da release de imprensa"
-						className="h-auto w-xl mt-10 sm:mt-0"
+						className="h-auto w-xl mb-10 sm:mb-0 order-1 sm:order-2"
 					/>
 				</Container>
 			</AnimatedSection>
-			<AnimatedSection
-				className="bg-red"
-				style={{
-					backgroundImage: `url(${bg5})`,
-					backgroundRepeat: "no-repeat",
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-				}}
-			>
+			<AnimatedSection className="bg-red" style={bgStyle(bg5)}>
 				<Container className="flex flex-col sm:flex-row justify-between py-16">
 					<img src={ipad} alt="Logo" className="h-auto w-lg mb-10 sm:mb-0" />
 					<div className="flex flex-col gap-6 justify-center text-cream max-w-xl">
@@ -171,10 +140,7 @@ export default function Services() {
 						<AnimatedItems>
 							<ul
 								className="space-y-2 p-10 bg-cream text-green font-medium"
-								style={{
-									WebkitMask: `url("${card2}") center / 100% 100% no-repeat`,
-									mask: `url("${card2}") center / 100% 100% no-repeat`,
-								}}
+								style={cardStyle}
 							>
 								<li>✽ Planejamento de conteúdo multiplataforma</li>
 								<li>✽ Criação de linha editorial e cronograma</li>

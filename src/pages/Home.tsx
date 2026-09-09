@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import { BsFillMegaphoneFill } from "react-icons/bs";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { LuMail } from "react-icons/lu";
-import { PiFilmSlateFill, PiVideoFill } from "react-icons/pi";
+import { PiFilmReelFill, PiFilmSlateFill, PiVideoFill } from "react-icons/pi";
 import { RiDraftFill } from "react-icons/ri";
 import { useLocation } from "react-router-dom";
 import bg1 from "../assets/illustrations/bg-01.svg";
@@ -61,11 +60,11 @@ export default function Home() {
 				/>
 			</AnimatedSection>
 			<AnimatedSection className="bg-cream">
-				<Container className="flex flex-col sm:flex-row justify-between items-center gap-10 sm:gap-24 sm:py-20 py-12">
-					<div className="flex flex-row shrink-0 gap-8 items-center">
-						<img src={shape1} alt="Logo" className="h-78 sm:h-96 w-auto" />
+				<Container className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-24 sm:py-20 py-12">
+					<div className="flex sm:flex-row flex-col shrink-0 gap-8 items-center">
+						<img src={shape1} alt="Logo" className="h-112 sm:h-96 w-auto" />
 
-						<h2 className="[writing-mode:vertical-rl] rotate-180  whitespace-nowrap">
+						<h2 className="[writing-mode:vertical-rl] -rotate-90 sm:rotate-180 sm:mx-0 -mx-20 whitespace-nowrap">
 							QUEM <strong>SOMOS</strong>
 						</h2>
 					</div>
@@ -89,7 +88,7 @@ export default function Home() {
 							conectada tanto ao público de cinema quanto a novos espectadores
 							nas redes sociais e plataformas digitais.
 						</p>
-						<p className="text-xl sm:text-2xl font-extrabold italic">
+						<p className="text-xl sm:text-xl font-extrabold italic mt-8">
 							Mais do que promover lançamentos, criamos narrativas, imagens e
 							experiências que conectam público e obra, ampliando seu universo
 							para além da tela.
@@ -126,7 +125,7 @@ export default function Home() {
 					<Card icon={PiVideoFill} title="PÓS-PRODUÇÃO">
 						Trailers, teasers, cartazes, press kit e plano de lançamento
 					</Card>
-					<Card icon={BsFillMegaphoneFill} title="DISTRIBUIÇÃO">
+					<Card icon={PiFilmReelFill} title="DISTRIBUIÇÃO">
 						Campanha digital, imprensa, redes sociais <br /> e monitoramento
 					</Card>
 				</Container>
@@ -134,15 +133,15 @@ export default function Home() {
 					Conheça nossos serviços
 				</Button>
 			</AnimatedSection>
-			<AnimatedSection className="relative sm:py-20 py-12 bg-linear-to-b sm:bg-linear-to-r from-yellow from-45% to-cream to-45%">
+			<AnimatedSection className="relative sm:py-20 py-12 bg-linear-to-b sm:bg-linear-to-r from-yellow from-48% to-cream to-45%">
 				<img
 					src={shape2}
 					alt="Ilustração vetorial laranja"
-					className="h-72 sm:h-112 w-auto absolute"
+					className="h-122 sm:h-112 w-auto absolute rotate-90 sm:rotate-0 top-0 -mt-18 sm:mt-0 sm:top-auto"
 				/>
-				<Container className="flex flex-col sm:flex-row justify-between gap-24 sm:gap-12">
+				<Container className="flex flex-col sm:flex-row justify-between gap-20 sm:gap-12">
 					<Carousel />
-					<div className="flex flex-col gap-6 justify-center sm:w-122">
+					<div className="flex flex-col gap-6 justify-center sm:w-122 mt-10 sm:mt-0">
 						<h2 className="text-orange">
 							COMO <strong>TRABALHAMOS</strong>
 						</h2>
@@ -185,9 +184,9 @@ export default function Home() {
 							com uma assessoria focada em comunicação para cinema?
 						</p>
 						<p>
-							Preencha o formulário ao lado para entrar em contato e contar um
-							pouco mais sobre o seu projeto! Acompanhe também nosso trabalho
-							pelas redes sociais.
+							Preencha o formulário para entrar em contato e contar um pouco
+							mais sobre o seu projeto! Acompanhe também nosso trabalho pelas
+							redes sociais.
 						</p>
 						<a
 							className="flex flex-row items-center gap-4 mt-4 w-fit"

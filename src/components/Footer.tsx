@@ -6,8 +6,8 @@ import { Container } from "./Container";
 export function Footer() {
 	return (
 		<Container>
-			<footer className="bg-cream flex flex-col sm:flex-row justify-between items-center py-4">
-				<img src={logoHorizontal} alt="Logo" className="h-14" />
+			<footer className="bg-cream flex flex-col sm:flex-row justify-between items-center sm:py-4 py-8">
+				<img src={logoHorizontal} alt="Logo" className="sm:h-14 h-12" />
 				<div className="flex flex-row gap-4 sm:py-0 py-4 items-center">
 					<p className="text-sm mr-4">Entre em contato:</p>
 					<a href={"https://www.instagram.com/butiacinema/"} target="blank">
