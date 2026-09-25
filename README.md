@@ -1,6 +1,8 @@
 # Butiá — Site Institucional
 
-Site institucional da **Butiá**, assessoria de comunicação especializada no mercado audiovisual brasileiro.
+Site institucional da **[Butiá](https://butiacinema.com.br/)**, assessoria de comunicação especializada no mercado audiovisual brasileiro.
+
+<img width="2520" height="1080" alt="butia" src="https://github.com/user-attachments/assets/cc8ee5df-80c5-470e-9ae8-a4a4b916ed10" />
 
 ## Sobre a Butiá
 
@@ -8,13 +10,12 @@ A Butiá nasce da necessidade de um olhar integrado sobre a divulgação de obra
 
 ## Tecnologias
 
-- **[React](https://react.dev/)** + **[Vite](https://vitejs.dev/)** — biblioteca de UI e bundler/dev server
-- **[TypeScript](https://www.typescriptlang.org/)** — tipagem estática
-- **[React Router](https://reactrouter.com/)** — roteamento entre páginas
-- **[Tailwind CSS v4](https://tailwindcss.com/)** — estilização utilitária
-- **[Framer Motion](https://www.framer.com/motion/)** — animações de entrada e transições
-- **[Biome](https://biomejs.dev/)** — linter e formatter
-- **[clsx](https://github.com/lukeed/clsx)** — concatenação segura de classes condicionais
+- **[React](https://react.dev/)** + **[Vite](https://vitejs.dev/)** 
+- **[React Router](https://reactrouter.com/)**
+- **[Tailwind CSS v4](https://tailwindcss.com/)**
+- **[Framer Motion](https://www.framer.com/motion/)**
+- **[Biome](https://biomejs.dev/)**
+- **[Formspree](https://formspree.io/)**
 
 Componentes de UI construídos sob medida, sem dependência de bibliotecas de componentes prontos.
 
@@ -69,10 +70,10 @@ npm run preview
 npm run lint
 ```
 
+## Deploy
+
+O site está hospedado no **[Cloudflare Pages](https://pages.cloudflare.com/)**, com deploy automático via integração com o GitHub.
+
 ## Licença
 
 Este projeto foi desenvolvido para uso exclusivo da Butiá. Todos os direitos de marca, identidade visual e conteúdo pertencem à Butiá.
-
----
-
-Desenvolvido por [Laura](https://github.com/laurascopel) 
